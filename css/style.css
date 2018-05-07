@@ -27,12 +27,13 @@
 }
 
 #container {
-  display: -ms-flexbox;
+  /*display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+      flex-wrap: wrap;*/
   margin: auto;
   width: 960px;
+  display: block;
 }
 
 body {
@@ -57,9 +58,14 @@ header {
   font-weight: 400;
 }
 
-header .fa-map {
+.fa-map {
   width: 60px;
   text-align: center;
+  position: fixed;
+  left: 0px;
+  position: absolute;
+  top: -55px;
+  font-size: 40px;
 }
 
 header a {
@@ -67,10 +73,17 @@ header a {
   color: black;
 }
 
-header h1 {
-  margin-left: 20px;
+main h1 {
+  margin: auto;
   width: 860px;
   text-align: center;
+  padding:15px 0;
+  position: absolute;
+  top:-80px;
+  font-size: 28px;
+  /*margin-left: 200px;
+  width: 860px;
+  text-align: center;*/
 }
 
 .map-page header {
@@ -95,6 +108,7 @@ header h1 {
 
 nav {
   width: 80px;
+  position: fixed;
 }
 
 nav li {
@@ -267,31 +281,41 @@ nav li:nth-child(7) a:hover::before {
 main {
   background-color: #e3e3e3;
   padding-top: 46.4px;
-  width: 860px;
-}
+  width: 880px;
+  padding-top:0;
+  float: right;
+  margin-bottom: 60px;
+  position: relative;
+  }
 
 main p {
   padding-left: 80px;
+  padding-top: 35px;
   width: 720px;
   line-height: 26px;
   font-weight: 300;
+  padding-bottom: 35px;
 }
 
-main ul {
+main .ulbox {
   background-color: #f0f0f0;
   padding-top: 80px;
   padding-bottom: 80px;
   padding-left: 80px;
-  counter-reset: listStyle;
+  height: auto;
+  overflow: hidden;
+  line-height:21px;
 }
 
-main li {
-  counter-increment: listStyle;
+main .ulbox ul {
+  padding: 0;
+  width: 50%;
+  float: left;
+  column-count: 1;
 }
 
 main li::before {
-  font-weight: 700;
-  content: counter(listStyle, upper-alpha);
+  list-style: none;
 }
 
 picture {
@@ -338,4 +362,51 @@ picture.nineteen-eighty {
 
 .map-page main {
   padding-top: 0;
+}
+
+ol {
+    -webkit-column-count: 2; -webkit-column-gap:20px;
+    -moz-column-count:2; -moz-column-gap:20px;
+    -o-column-count: 2; -o-column-gap:20px;
+    column-count: 2; column-gap:20px;
+    list-style-position: outside;
+    padding: 90px;
+}
+
+.text-indent{
+text-indent:-40px;
+padding-left:10px;
+}
+
+.weight{
+font-weight:200;
+}
+
+h1{
+  font-weight: normal;
+}
+
+h1 span {
+  font-weight: 700;
+}
+
+main ul li {
+  font-weight: 700;
+}
+
+.normal{
+  font-weight: 400;
+}
+
+sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+.backspace {
+  margin-left: -4px;
+}
+
+.list-icon{
+  font-weight: 700;
 }
